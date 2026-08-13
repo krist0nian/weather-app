@@ -9,7 +9,7 @@ async function getWeather() {
 
   const apiKey = "70d61e4d968c8b5b0f8567e4d3154b39";
   const url =
-    `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${apiKey}`;
+    `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=imperial&appid=${apiKey}`;
 
   const resultEl = document.getElementById("result");
 
@@ -30,14 +30,22 @@ async function getWeather() {
       return;
     }
 
+    const iconCode = data.weather?.[0]?.icon;
+
     resultEl.innerHTML = `
       <h2>${data.name}, ${data.sys.country}</h2>
-      <div class="temp">${Math.round(data.main.temp)}°C</div>
+      <div class="temp">${Math.round(data.main.temp)}°F</div>
       <div class="desc">${data.weather?.[0]?.description ?? ""}</div>
+      ${
+    iconCode
+      ? `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" alt="${data.weather[0].description}" />`
+      : ""
+      }
+
       <div class="info">
         <div>Humidity<span>${data.main.humidity}%</span></div>
         <div>Wind Speed<span>${data.wind.speed} km/h</span></div>
-        <div>Feels Like<span>${Math.round(data.main.feels_like)}°C</span></div>
+        <div>Feels Like<span>${Math.round(data.main.feels_like)}°F</span></div>
       </div>
     `;
   } catch (error) {
