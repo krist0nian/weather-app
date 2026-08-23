@@ -64,14 +64,14 @@ h2 {
 }
 
 #result {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
     margin-top: 30px;
 }
 
 .desc {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 600;
   color: white;
   margin: auto;
@@ -96,6 +96,8 @@ h2 {
     justify-content: center;
     gap: 10px;
     height: 240px;
+    padding-left: 24px;
+    padding-right: 16px;
 }
 
 .weather__results {
@@ -104,7 +106,7 @@ h2 {
 
 .weather__icon {
     height: auto;
-    width: 280px;
+    width: 400px;
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
