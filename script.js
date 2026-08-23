@@ -33,14 +33,17 @@ async function getWeather() {
     const iconCode = data.weather?.[0]?.icon;
 
     resultEl.innerHTML = `
-      <h2>${data.name}, ${data.sys.country}</h2>
-      <div class="temp">${Math.round(data.main.temp)}°F</div>
-      <div class="desc">${data.weather?.[0]?.description ?? ""}</div>
-      ${
-    iconCode
-      ? `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" alt="${data.weather[0].description}" />`
-      : ""
-      }
+    <div class="weather__container">
+      <div class="weather__results">
+        <h2>${data.name}, ${data.sys.country}</h2>
+        <div class="temp">${Math.round(data.main.temp)}°F</div>
+        <div class="desc">${data.weather?.[0]?.description ?? ""}</div>
+      </div>
+        ${iconCode ? `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" alt="${data.weather[0].description}" class="weather__icon" />`
+        : ""
+        }
+    </div>
+      
 
       <div class="info">
         <div>Humidity<span>${data.main.humidity}%</span></div>
