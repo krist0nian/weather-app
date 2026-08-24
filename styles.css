@@ -9,10 +9,11 @@ body {
     background: linear-gradient(135deg, #667eea, #764ba2);
     background-image: url(./assets/neoncityskyline.jpg);
     background-size: cover;
+    background-position:inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     min-height: 100vh;
 }
 
@@ -20,7 +21,7 @@ body {
     background: transparent;
     padding: 10px;
     width: 540px;
-    height: 780px;
+    height: 740px;
 }
 
 h1 {
@@ -101,7 +102,7 @@ h2 {
 }
 
 .weather__results {
-    width: 400px;
+    width: 500px;
 }
 
 .weather__icon {
@@ -132,27 +133,37 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 42px;
+    margin-bottom: 68px;
 }
 
 @media (max-width: 550px) {
     .weather__container {
         height: 180px;
+        padding-left: 12px;
+        padding-right: 4px;
     }
 
     .weather__results {
-        width: 200px;
+        width: 130px;
     }
 
     h2 {
         font-size: 22px;
     }
     
+    .search-box input {
+        padding: 8px;
+    }
+
     .search-box {
-        width: 380px;
+        width: 300px;
         justify-content: center;
         margin: 0 auto;
         gap: 10px;
+    }
+
+    .search-btn {
+        padding: 8px;
     }
      .temp {
         font-size: 64px;
@@ -167,17 +178,17 @@ h2 {
      }
 
      .info span {
-        font-size: 18px;
+        font-size: 15px;
      }
 
      .info div {
         background: #f1f7ff;
         padding: 8px 4px;
-        gap: 8px;
     }
     .info {
-        width: 380px;
-        font-size: 16px;
+        width: 310px;
+        font-size: 14px;
+        gap: 8px;
     }
 
 }
