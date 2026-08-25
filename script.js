@@ -43,7 +43,6 @@ async function getWeather() {
         : ""
         }
     </div>
-      
 
       <div class="info">
         <div>Humidity<span>${data.main.humidity}%</span></div>
@@ -51,6 +50,7 @@ async function getWeather() {
         <div>Feels Like<span>${Math.round(data.main.feels_like)}°F</span></div>
       </div>
     `;
+    
   } catch (error) {
     console.error(error);
     resultEl.innerHTML = "<p style='color:red;'>Something went wrong!</p>";

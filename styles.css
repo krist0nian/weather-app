@@ -139,6 +139,12 @@ h2 {
 }
 
 @media (max-width: 550px) {
+
+    .container {
+        width: 300px;
+        height: 740px;
+    }
+
     .weather__container {
         height: 180px;
         width: 280px;
@@ -167,23 +173,24 @@ h2 {
     .search-btn {
         padding: 8px;
     }
-     .temp {
+    
+    .temp {
         font-size: 60px;
-     }
+    }
 
-     .desc {
+    .desc {
         font-size: 22px;
-     }
+    }
 
-     .weather__icon {
+    .weather__icon {
         width: 130px;
-     }
+    }
 
-     .info span {
+    .info span {
         font-size: 15px;
-     }
+    }
 
-     .info div {
+    .info div {
         background: #f1f7ff;
         padding: 8px 4px;
     }
