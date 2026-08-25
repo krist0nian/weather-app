@@ -96,10 +96,11 @@ h2 {
 .weather__container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 4px;
     height: 240px;
-    padding-left: 24px;
-    padding-right: 16px;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .weather__results {
@@ -108,7 +109,7 @@ h2 {
 
 .weather__icon {
     height: auto;
-    width: 400px;
+    width: 320px;
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
@@ -140,16 +141,16 @@ h2 {
 @media (max-width: 550px) {
     .weather__container {
         height: 180px;
-        padding-left: 12px;
-        padding-right: 4px;
+        width: 280px;
+        gap: 0px;
     }
 
     .weather__results {
-        width: 130px;
+        width: 180px;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .search-box input {
@@ -157,7 +158,7 @@ h2 {
     }
 
     .search-box {
-        width: 300px;
+        width: 260px;
         justify-content: center;
         margin: 0 auto;
         gap: 10px;
@@ -167,7 +168,7 @@ h2 {
         padding: 8px;
     }
      .temp {
-        font-size: 64px;
+        font-size: 60px;
      }
 
      .desc {
@@ -175,7 +176,7 @@ h2 {
      }
 
      .weather__icon {
-        width: 150px;
+        width: 130px;
      }
 
      .info span {
@@ -187,7 +188,7 @@ h2 {
         padding: 8px 4px;
     }
     .info {
-        width: 310px;
+        width: 300px;
         font-size: 14px;
         gap: 8px;
     }
